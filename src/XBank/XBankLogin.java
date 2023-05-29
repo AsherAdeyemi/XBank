@@ -219,7 +219,6 @@ public class XBankLogin implements ActionListener {
     }
 
     public void DepositCurrentWindow() {
-
         enterDepositCurrentAmountLabel.setFont(new Font("Ubuntu", Font.BOLD, 20));
         enterDepositCurrentAmountLabel.setBounds(45, 10, 250, 40);
 
@@ -228,7 +227,6 @@ public class XBankLogin implements ActionListener {
 
         amountDepositCurrent.setFont(new Font("Ubuntu", Font.PLAIN, 19));
         amountDepositCurrent.setBounds(45, 80, 250, 40);
-
         depositCurrentButton.setFont(new Font("Ubuntu", Font.BOLD, 19));
         depositCurrentButton.setFocusable(false);
         depositCurrentButton.setBounds(70, 140, 140, 40);
@@ -251,10 +249,8 @@ public class XBankLogin implements ActionListener {
 
         amountWithdrawalCurrentLabel.setFont(new Font("Ubuntu", Font.PLAIN, 19));
         amountWithdrawalCurrentLabel.setBounds(45, 50, 250, 40);
-
         amountWithdrawalCurrent.setFont(new Font("Ubuntu", Font.PLAIN, 19));
         amountWithdrawalCurrent.setBounds(45, 80, 250, 40);
-
         withdrawalCurrentButton.setFont(new Font("Ubuntu", Font.BOLD, 19));
         withdrawalCurrentButton.setFocusable(false);
         withdrawalCurrentButton.setBounds(70, 140, 140, 40);
@@ -269,8 +265,6 @@ public class XBankLogin implements ActionListener {
         WithdrawalAmountCurrent.add(amountWithdrawalCurrent);
         WithdrawalAmountCurrent.add(withdrawalCurrentButton);
     }
-
-
     public  void depositSavingsFile(float amount){
         try {
             FileWriter fileWriter = new FileWriter("SavingFile.txt");
@@ -325,7 +319,7 @@ public class XBankLogin implements ActionListener {
             if(pin.getText().equals(pinValue)){
                 ChooseAccTypeWindow();
                 frame.dispose();
-            }else{JOptionPane.showMessageDialog(null,"Pin is incorrect","Incorrect pin",JOptionPane.ERROR_MESSAGE);}
+            }else{JOptionPane.showMessageDialog(null,"Incorrect PIN","Use correct pin",JOptionPane.ERROR_MESSAGE);}
         }else if(e.getSource() == savings) {
             ChooseSavingsWindow();
             ChooseAcctType.dispose();
